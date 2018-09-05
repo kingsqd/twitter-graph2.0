@@ -1,11 +1,13 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+const serveStatic = require("serve-static")
 var mongodb = require("mongodb");
 var Twitter = require("twitter");
 //var ObjectID = mondgodb.ObjectID;
 
 
 var app = express();
+app.use(serveStatic(path.join(__dirname, 'dist')));
 app.use(bodyParser.json());
 
 var twitterClient = new Twitter({
