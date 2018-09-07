@@ -6,7 +6,6 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi ",
     "start": "node server.js",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run e2e",
